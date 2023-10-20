@@ -1,1 +1,20 @@
+#define LED 2
+void setup() {
+  // put your setup code here, to run once:
+  // setup led
+  pinMode(LED,OUTPUT);
+  Serial.begin(9600);
+}
 
+void loop() {
+  // get the input value from pin A2
+  int sensorValue = analogRead(A2);
+  // put your main code here, to run repeatedly:
+  digitalWrite(LED,HIGH);
+  delay(sensorValue);
+  digitalWrite(LED,LOW);
+  delay(sensorValue);
+}
+
+// youtube video
+// https://youtube.com/shorts/izl9ZhkWzgU?si=9ZSlDnIMDjPqY0k0
